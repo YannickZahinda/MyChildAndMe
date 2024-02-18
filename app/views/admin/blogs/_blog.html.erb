@@ -1,0 +1,37 @@
+
+<div id="<%= dom_id blog %>">
+  <div class="blogs">
+    <h1 style="text-align: center; margin-top: 3.5rem">Blogs</h1>
+      <div class="blog">
+        <div class="blog-head">
+          <h5>
+            <div class="admin-icon-blog">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="current-user">
+              <% if @blog.user_id? %>
+                <%= @blog.user.email%>
+              <% end %>
+            </div>
+          </h5>
+          <div>Published: <em><strong><%= @blog.created_at.strftime("%B %d, %Y")%></strong></em></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-text">
+            <div class="blog-title-container">
+              <h2 class="title"><%= @blog.title %></h2>
+              <div class= blog-title-btns >
+                <div><%= link_to "Edit", edit_admin_blog_path(@blog), class: "btn-edit" %> <%= image_tag "edit-pen-icon", class: "edit-btn-icon"%></div> 
+                <div><%= link_to "Back to blogs", admin_blogs_path, class: "btn-back" %> </div>
+              </div>
+            </div><br/>
+            <p><%= @blog.content %></p>
+            <div class="show-btn"> 
+                <div><%= button_to 'Delete this blog', admin_blog_path(@blog), method: :delete, class: "btn-delete"%></div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</div>

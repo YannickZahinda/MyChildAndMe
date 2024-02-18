@@ -1,0 +1,382 @@
+.nav-wrapper {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #459A7D;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.layout-admin {
+  display: flex;
+  background-color: #459A7D;
+  box-sizing: border-box;
+}
+
+.admin-body {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #fff;
+  flex: 1;
+
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-page {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.data {
+  font-weight: bold;
+  font-size: large;
+}
+
+.column-one {
+  width: 100%;
+}
+
+.column-two {
+  width: 100%;
+}
+
+.column-one h1 {
+  color: #805F2F;
+}
+
+.column-one .dec-overview {
+  font-weight: bold;
+  color: #0E6EED;
+  padding: 10px 10px;
+}
+
+.column-one .overview-last {
+  color: #000;
+  font-weight: 800;
+  font-size: 9px;
+  padding: 10px 10px;
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+.overview-last {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-wrapper a{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 18px;
+
+}
+
+.company-logo{
+  width: 120px;
+}
+
+.overview-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.overview-card {
+  /* width: 168px; */
+  height: 130px;
+  margin: 10px;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr; */
+  border-radius: 20px;
+}
+
+.overview-card .mother-heading {
+  font-size: 15px;
+  color: rgba(41, 40, 40, 0.692);
+  padding: 15px;
+}
+
+.overview-card .data {
+  padding: 0px 0px 15px 15px;
+  color: rgba(41, 40, 40, 0.692);
+}
+
+.overview-card:nth-last-child(4){
+  background-color: #459A7D;
+  color: white;
+}
+
+.overview-card:nth-last-child(3){
+  border: 1px solid rgba(41, 40, 40, 0.336);
+  color: rgba(41, 40, 40, 0.336);
+}
+
+.overview-card:nth-last-child(2){
+  border: 1px solid rgba(41, 40, 40, 0.336);
+  color: rgba(41, 40, 40, 0.336);
+}
+.overview-card:nth-last-child(1){
+  border: 1px solid rgba(41, 40, 40, 0.336);
+  color: rgba(41, 40, 40, 0.336);
+}
+
+.chart {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 5px;
+  margin: 10px;
+  width: 70%;
+}
+
+.chart-img {
+  width: 100%;
+  object-fit: contain; 
+}
+
+/* ============ Chart Messages ============= */
+
+.chart-message-container {
+  display: flex;
+ 
+}
+
+.message-list-link {
+  width: 30%;
+}
+.message-content {
+  color: #302f2f;
+}
+
+.message-list {
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  height: 60vh;
+  
+ 
+}
+
+.msg-list {
+  overflow-y: scroll;  
+  height: 46vh;
+}
+
+
+.msg {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  gap: 15px;
+}
+
+.icon-message{
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  padding: 5px;
+  height: max-content;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.user {
+  color: #459A7D;
+}
+
+.message-preview{
+  flex: 1;
+  width: 100%;
+}
+
+/*=========== testimonies styles====================/  */
+
+.testimonies-container {
+  width: 70%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Header Styles */
+.testimonies-header {
+  color: #459A7D;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Add Testimony Link Styles */
+.add-testimony-link {
+  color: #459A7D;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Testimonies List Styles */
+.testimonies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 65vh;
+  overflow-y: scroll;
+}
+
+/* Individual Testimony Styles */
+.testimony {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Testimony Image Styles */
+.testimony-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Testimony Head Container Styles */
+.testimony-head-container {
+  margin-top: 15px;
+}
+
+/* Testimony Title Styles */
+.testimony-title {
+  color: #459A7D;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Edit Link and Icon Styles */
+.edit-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.edit-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.edit-btn-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* Testimony Body Styles */
+.testimony-body {
+  margin-top: 15px;
+  color: #555;
+  width: 100%;
+  text-align: start;
+}
+
+
+/*===============  blog-testimony-section ================= */
+
+.blog-testimony-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.blog-testimony-section .p {
+  font-size: 35px;
+  text-decoration: none;
+}
+
+/*  ============================== Responsiveness ======================== */
+
+
+@media only screen and (max-width: 600px) {
+  .admin-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layout-admin {
+    justify-content: center;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .company-logo{
+    width: 60px;
+  }
+
+  .overview-card {
+  }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row on small screens */
+ }
+
+  .column-one {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .chart-message-container {
+    flex-direction: column;
+ }
+ .chart, .message-list {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0; /* Adjust spacing */
+ }
+
+ .testimony {
+  width: 100%; /* Full width on small screens */
+}
+
+  /* .chart-message-container{
+    flex-direction: column;
+  } */
+
+  /* .message-list {
+    width: 100%;
+  } */
+
+  .scrollable-items {
+    width: 100%;
+  }
+
+  /* .chart {
+    width: 100%;
+  } */
+
+  .nav-menu {
+    padding: 10px;
+    
+  }
+  
+  .logout {
+    margin-left: 10px;
+  }
+
+  .admin-cont {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+
+}
+
+
+

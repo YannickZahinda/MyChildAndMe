@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to(root_path, class: "navbar-brand") do %>
+    <%= image_tag "mychildandmelogo.webp", class: "logo-img me-2", alt: "Logo" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <%= image_tag "hamburger-menu.png", class: "nav__toggler", alt: "Toggle navigation" %>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "About", about_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Blog", blogs_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Donate", donate_path, class: "nav-link rounded-pill px-3 py-2", style: "background-color: #D13C3F;" %>
+      </li>
+      <li>
+        <a href='#mwabanacenter' class='nav-link'>Mwabana Center</a>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Contact Us", new_message_path, class: "nav-link" %>
+      </li>
+      <% if user_signed_in? %>
+        <% if current_user.is_admin? %>
+          <li class="nav-item">
+            <%= link_to "Dashboard", admin_home_index_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+

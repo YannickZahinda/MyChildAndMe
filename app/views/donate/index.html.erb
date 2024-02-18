@@ -1,0 +1,29 @@
+<head>
+  <%= stylesheet_link_tag "donate" %>
+</head>
+
+<body>
+  <div id="container" class='text-center form-donate-ui'>
+    <div class="donate-header">
+      <h1>Donate</h1>
+    </div>
+    <div id="content">
+      <div class="text-center">
+        <div >
+          <p class="font-weight-bold">
+            Your donation makes a REAL Difference:
+          </p>
+          <p class="font-weight-bold">
+            $50/month supports a family with basic needs including food and housing
+          </p>
+          <p class="font-weight-bold">
+            $20/ month educates a child and equips them with school supplies (+$10 feeds them)
+          </p>
+        </div>
+        <div class="">
+          <%= render "form" %>
+        </div>
+      </div>
+    </div>
+
+</body>

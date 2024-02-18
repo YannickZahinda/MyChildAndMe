@@ -1,0 +1,251 @@
+<div class="home">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active h-50 dark-overlay">
+         <%= image_tag "Capture.PNG", class: "d-block w-100 darker-image" %>
+       </div>
+       <div class="carousel-item dark-overlay">
+         <%= image_tag "africawomen.png", class: "d-block w-100 darker-image"%>
+       </div>
+       <div class="carousel-item dark-overlay">
+         <%= image_tag "child1.PNG", class: "d-block w-100 darker-image" %>
+       </div>
+       
+       <div class="description carousel-caption d-none d-md-block">
+         <h4>WELCOME TO MY CHILD & ME INC </h4> <br/>
+         <p><strong>HELPING ABANDONNED MOTHERS WITH CHILDREN</strong></p>
+         <%= link_to "DONATE NOW", donate_path, style: "border: none; padding: 17px; margin: 15px; color: white; background-color: #d13c3f; font-size: 22px; border-radius: 15px", class: "text-decoration-none"%>
+       </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <div class="who-we-are">
+    <div class="descpt-wwa">
+      <p>
+        <span style="color: #d13c3f;" class='display-6'>WHO WE ARE</span>
+        <br/>
+        <%= image_tag "Line-2.png", class: 'w-25' %>
+         <br/><br/>
+
+         We help mothers help themselves and their children.
+         My Child & Me, Inc. is a non-profit organization committed to stabilizing families
+         by elevating the quality of life of the abandoned mothers with children
+         living in the Democratic Republic of the Congo. My Child & Me recognizes the devastation of war and sexual
+         violence against women in the Congo and specifically its impact on mothers with children.
+         My Child & Me's mission is
+          to provide these abandoned mothers with education, life skills training, and tools to enable them to
+         provide for their families and become contributing members of their society. <br/> <br/> <br/> <br/>
+         <%= link_to 'Donate now', donate_path, class: "swing-in-top-fwd" %>
+      </p>
+      <%= image_tag "childspicfigma.png", class: "descpt-img" %>
+    </div>
+  </div>
+  <div class="impact">
+    <h1 style="font-size: 30px; padding: 25px">OUR IMPACT</h1>
+    <p>These are our impact over the years</p> <br/><br/>
+    <% if @impacts.present?%>
+    <% @impacts.each do |i| %>
+      <div class="status">
+        <div class="mothers">
+          <h2>MOTHERS</h2>
+          <div id='mothers-counter' style="font-size: 26px"><strong><%= i.mother%></strong></div>
+        </div>
+        <div class="children">
+          <h2>CHILDREN</h2>
+          <div id='mothers-counter' style="font-size: 26px"><strong><%= i.children%></strong></div>
+        </div>
+        <div class="business">
+          <h2>BUSINESSES</h2>
+          <div id='mothers-counter' style="font-size: 26px"><strong><%= i.business%></strong></div>
+        </div>
+        <div class="workshop">
+            <h2>WORKSHOPS</h2>
+            <div id='mothers-counter' style="font-size: 26px"><strong><%= i.workshop%></strong></div>
+        </div>
+      </div>
+    <% end %>
+    <%else%>
+      <div>NO IMPACT </div>
+    <% end %>
+  </div>
+  <div class='mwabana-center-wrapper' id="mwabanacenter">
+    <h1 class='text-center'>MWABANA CENTER</h1>
+    <div class='container-center'>
+      <div class='center-card'>
+        <%= image_tag 'mwabanacenter.PNG', class: 'card-img1'%>
+        <p class='display-6 text-center p-2'>Mwabana training center</p>
+        <p>
+          The Mwabana Training Center is a My Child and Me Initiative founded in 2017. 
+          The women-run training center offers abandoned mothers with entrepreneurship 
+          skills and vocational training. By learning hair braiding, soap-making, cooking,
+          and sewing skills,  mothers are empowered with an avenue to autonomy,
+          capable of generating income to provide for themselves and their families. 
+        </p>
+      </div>
+      <div class='center-card'>
+        <%= image_tag 'mwabanacenter1.PNG', class: 'card-img1'%>
+        <p class='display-6 text-center p-2'>Sewing</p>
+        <p>
+          In Bukavu and many other parts of Africa, textiles and clothing are 
+          traditionally handmade by a local seamstress. That is why founder, Josette Zahinda, 
+          identified sewing as one of the first vocational offerings needed at the Mwabana Training Center. 
+          6 years later, beneficiaries have graduated and gone onto open galleries, 
+          clothing stores, and textile shops of their own. 
+        </p>
+      </div>
+      <div class='center-card'>
+        <%= image_tag 'mwabanacenter2.PNG', class: 'card-img1'%>
+        <p class='display-6 text-center p-2'>Culinary Art</p>
+        <p>
+          Utilizing fresh and locally sourced ingredients, 
+          our culinary arts program involves knowledge of farm to table service 
+          including sourcing, 
+          cleaning, cooking, and presentation.
+          Bukavu is an emerging market for food service, our culinary arts graduates 
+          find work with hotels, restaurants, and catering services. Many also become street food vendors, 
+          cooking at home and selling to local students, 
+          office workers, and even at construction sites.   
+        </p>
+      </div>
+      <div class='center-card'>
+        <%= image_tag 'mwabanacenter3.PNG', class: 'card-img1'%>
+        <p class='display-6 text-center p-2'>Basket Weaving</p>
+        <p>
+          Skillfully crafted from materials made of recycled plastic, our 
+          basket weaving courses require attention to detail and an eye for design.  
+        </p>
+      </div>
+      <div class='center-card'>
+        <%= image_tag 'mwabanacenter4.PNG', class: 'card-img1'%>
+        <p class='display-6 text-center p-2'>Hair Braiding</p>
+        <p>
+          A global enterprise that emerged from Africa is the art of hair braiding. Opening up doors for women to work in shops or braid out of their homes, 
+          learning this trade involves cornrowing, weaving, and haircare skills. 
+        </p>
+      </div>
+      <div class='center-card center-card1'>
+        <%= image_tag 'animateimage.avif', class: 'card-img2'%>
+        <p class='display-6 text-center p-2'>Save Africa</p>
+      </div>
+    </div>
+  </div>
+  <h1 style="text-align: center; padding: 30px">FACTS</h1>
+  <div class="facts-container">
+    <div class="women-in-congo">
+      <h2>WOMEN IN CONGO </h2>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%# <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <p>Violence against women and girls in the Congo are "deep-seated cultural norms"</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-img" >
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <p>Congo was called the most dangerous place in the world to be a woman.</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <div><p>48 women are raped in the Congo every hour.</p></div>
+      </div>
+    </div>
+
+    <div class="children-in-congo">
+      <h2>CHILDREN IN CONGO </h2>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <p>Parents pay for their children to attend elementary and hight school</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <p>The costs for education are almost as high as the per capital income</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <p>Only 50% of children age 6 - 11 attend primary school</p>
+      </div>
+      <div class="fact-card">
+        <div class="fact-img">
+          <%= image_tag "go-green-icon.png", style: "width: 100%; height: 100%; object-fit: contain" %>
+        </div>
+        <p>Cities in the Congo may host as many as 20,000 street children</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="testimonial-section">
+    <div style="padding: 20px"><h1>TESTIMONIALS</h1></div>
+    <div class="testimonial-container">
+      <% if @testimonies.present? %>
+       <% @testimonies.each do |t| %>
+        <div class="testimonial-box">
+          <div class="testimonial-image">
+            <%= image_tag t.image  %>
+          </div>
+          <h3 ><%= t.title%></h3>
+          <div class="testimonial-text">
+            <p><%= t.body %></p>
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+        <div>NO TESTIMONIALS FOR NOW. Will let you know</div>
+      <% end %>
+    </div>
+    <div class="testimonial-controls">
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
+  <div class="news-letter">
+    <h1>BE PART OF SOMETHING GREAT</h1>
+    <p>Subscribe to our Newsletter</p>
+    <form action="">
+      <input type="text" placeholder="Enter email addresse">
+      <button>Submit</button>
+    </form>
+  </div>
+  <div class="involvement">
+    <div>
+      <h1 class="inv-title">YOUR INVOLVEMENT</h1>
+      <p style="font-size: 40px; color: #d13c3f; font-weight: bold;">THE NEED</p>
+      <div style="text-align: start; padding: 20px"><button style="border: none; border-radius: 10px; color: white; padding: 10px; background-color: #d13c3f">DONATE NOW</button></div>
+    </div>
+    <p class="inv-p">
+      40% of women and girls have been raped in the Congo. These women are often shunned and abandoned after sexual assaults. 
+      The stigma of rape compels hundreds of thousands of men in eastern Congo to shun their wives and abandon them. As such, many mothers in the Congo are 
+      raising families alone.
+      These abandoned mothers with children are among the most vulnerable in the society. They live in abject poverty while having to provide for a family, 
+      shouldering the burden of shame, physical and psychological trauma, unwanted pregnancies alone.
+      These mothers are ill-equipped to raise their children in a healthy environment. As such, sex crimes and child labor have increased among “street children”. 
+      The impact of abandonment on these families is a general denigration and deterioration of the family unit as a whole.
+    </p>
+  </div>
+  <div class="center designed">
+    
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> PO Box 673, Ashburn VA</p>
+      <p><i class="fas fa-phone"></i> +15714305030</p>
+      <p><i class="fas fa-envelope"></i> info@mychildandme.org</p>
+    </div>
+
+  </div>
+</div>

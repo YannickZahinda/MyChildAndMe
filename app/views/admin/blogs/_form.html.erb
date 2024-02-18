@@ -1,0 +1,32 @@
+<%= form_with(model: [:admin, blog], local: true, data: { turbo: :false }) do |form| %>
+  <% if blog.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+        <% blog.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <%= form.label :title, "Title", class: 'label' %>
+    <%= form.text_field :title, class: 'form-control input', placeholder: 'Enter your title' %>
+  </div>
+
+  <%# <div class="input-field">
+    <%= form.label :body , class: 'label'%>
+    <%# <%= form.text_area :body, class: 'input', style: 'width: 100vh; height: 30vh; font-size: 12px' %> 
+  <%# </div> %>
+  <div class="input-field">
+    <%= form.label :content , class: 'label'%>
+    <%= form.rich_text_area :content, class: 'input', style: 'width: 100vh; height: 30vh; font-size: 12px' %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit class: 'p-2 my-2 bg-secondary border-0 rounded text-white'%>
+  </div>
+<% end %>
+
